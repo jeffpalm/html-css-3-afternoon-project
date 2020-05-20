@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+
+body {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'Montserrat';
+}
+
+/* General bg colors for framing */
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+/* General Container Alignment Classes */
+
+.flex {
+	display: flex;
+}
+
+.jc-c {
+	justify-content: center;
+}
+
+.jc-sa {
+	justify-content: space-around;
+}
+
+.jc-sb {
+	justify-content: space-between;
+}
+
+.jc-se {
+	justify-content: space-evenly;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.ai-fs {
+    align-items: flex-start;
+}
+
+.ai-fe {
+    align-items: flex-end;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+/* General Container size classes */
+
+.fw {
+    width: 100vw;
+}
+
+.fh {
+    height: 100vh;
+}
+
+/* Nav */
+
+.Nav {
+    height: 20vh;
+}
