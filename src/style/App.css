@@ -10,8 +10,8 @@
 body {
 	font-size: 16px;
     font-family: 'Montserrat';
-    top: 0;
 }
+
 body::-webkit-scrollbar{
     display: none;
 }
