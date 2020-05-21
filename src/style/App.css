@@ -1,80 +1,249 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+@import './palmy.css';
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
 
 body {
-	box-sizing: border-box;
 	font-size: 16px;
-	font-family: 'Montserrat';
+    font-family: 'Montserrat';
+    top: 0;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
-/* General bg colors for framing */
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+.img-ph,
+.italic {
+	text-align: center;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 4rem;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+h3 {
+	font-family: 'Droid Serif';
+	font-size: 2rem;
+	font-style: italic;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+/* General colors for framing */
+
+.prim {
+	color: #fed136;
+}
+
+.prim-bg {
+	background-color: #fed136;
+}
 
 .red {
-    background-color: red;
+	background-color: red;
 }
 
-.black {
-    background-color: black;
+.dark {
+	background-color: #212529;
 }
 
-/* General Container Alignment Classes */
-
-.flex {
-	display: flex;
-}
-
-.jc-c {
-	justify-content: center;
-}
-
-.jc-sa {
-	justify-content: space-around;
-}
-
-.jc-sb {
-	justify-content: space-between;
-}
-
-.jc-se {
-	justify-content: space-evenly;
-}
-
-.ai-c {
-	align-items: center;
-}
-
-.ai-fs {
-    align-items: flex-start;
-}
-
-.ai-fe {
-    align-items: flex-end;
-}
-
-.fixed {
-    position: fixed;
-}
-
-.rel {
-    position: relative;
-}
-
-.abs {
-    position: absolute;
-}
-
-/* General Container size classes */
-
-.fw {
-    width: 100vw;
-}
-
-.fh {
-    height: 100vh;
+.w {
+	color: white;
 }
 
 /* Nav */
 
-.Nav {
-    height: 20vh;
+.nav {
+	position: fixed;
+	padding: 24px 50px;
+	top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-shrink {
+	background-color: #212529;
+}
+
+.logo {
+	width: 100%;
+	max-width: 188px;
+	height: auto;
+}
+
+.logo-shrink {
+	max-width: 144px;
+}
+
+.logo,
+.logo-shrink,
+.logo-cont {
+	transition: all 500ms !important;
+}
+
+.nav,
+.nav-shrink,
+.logo,
+.logo-shrink {
+	transition: height 500ms;
+}
+
+.nav-link-cont {
+	transition: all 500ms;
+}
+
+.nav-link {
+	color: white;
+	font-size: 1rem;
+	padding: 20px;
+}
+
+.nav-link:hover {
+	color: #fed136;
+}
+
+.menu-btn {
+	min-height: 35px;
+	min-width: 75px;
+	background-color: #fed136;
+	color: white;
+	padding: 12px;
+	border-radius: 5px;
+	display: none;
+	border: none;
+}
+
+/* Hero Image */
+
+.hero {
+	background-image: url('http://blackrockdigital.github.io/startbootstrap-agency/assets/img/header-bg.jpg');
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+	height: 90vh;
+	min-height: 745px;
+}
+
+.hero-main {
+	margin-top: 20px;
+}
+
+.hero-btn {
+	height: 60px;
+	width: 225px;
+	border-radius: 5px;
+	border: none;
+	font-weight: 700;
+	font-size: 1rem;
+	padding: 0 20px;
+	margin-top: 50px;
+}
+
+/* Serv-cards */
+
+#services {
+	height: 80vh;
+}
+
+.serv-card {
+	height: 380px;
+	width: 30vw;
+	min-width: 225px;
+}
+
+.img-ph {
+	height: 124px;
+	max-width: 124px;
+}
+
+#home {
+	width: 100vw;
+}
+
+@media screen and (max-width: 1200px) {
+	.nav,
+	.hero,
+	#services {
+		padding: 24px 100px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.nav-link-cont {
+		position: fixed !important;
+		overflow: hidden;
+		top: 85px;
+		left: 0;
+		min-width: 100vw;
+		z-index: -1;
+		padding: 0 50px;
+        height: 0;
+        background-color: #212529;
+	}
+
+	.nav-link-cont,
+	.expand,
+	.show-links {
+		transition: all 300ms linear;
+	}
+
+	.nav-link {
+		padding: 0;
+	}
+	.nav-link-list {
+		opacity: 1 !important;
+		width: 100%;
+		height: 190px;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	.expand {
+		height: 190px !important;
+	}
+	.show-links {
+		opacity: 1 !important;
+	}
+	.nav {
+		background-color: #212529;
+	}
+	.nav,
+	.hero,
+	#services {
+		padding: 24px 50px;
+	}
+	.menu-btn {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.serv-card-cont {
+		flex-wrap: wrap;
+	}
 }

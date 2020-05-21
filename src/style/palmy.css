@@ -1,0 +1,77 @@
+/* General Container Alignment Classes */
+
+.flex {
+	display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.jc-c {
+	justify-content: center;
+}
+
+.jc-sa {
+	justify-content: space-around;
+}
+
+.jc-sb {
+	justify-content: space-between;
+}
+
+.jc-se {
+	justify-content: space-evenly;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.ai-fs {
+    align-items: flex-start;
+}
+
+.ai-fe {
+    align-items: flex-end;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+/* General Container size classes */
+
+.fvw {
+    width: 100vw;
+}
+
+.fvh {
+    height: 100vh;
+}
+
+.fw {
+    width: 100%;
+}
+
+.fh {
+    height: 100%;
+}
+
+/* Text classes */
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.italic {
+    font-style: italic;
+}
